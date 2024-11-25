@@ -4,96 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Win Duster Flat UI Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <div id="logo">
-            <h1>Win Duster Flat UI Edition</h1>
+        <div class="logo">
+            Win Duster <span>Flat UI Edition</span>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="key-features">
-            <h3>Key Features</h3>
-            <ul>
-                <li>Full System Scan for optimizing your PC health and fixing any issues.</li>
-                <li>Network Optimization for better connectivity and faster internet speeds.</li>
-                <li>HDD/SSD Defrag and Trim to improve disk performance and lifespan.</li>
-                <li>Temporary File Removal to clean up your system by removing unnecessary files.</li>
-            </ul>
-        </section>
-
-        <section id="faq-section">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">Q1: What is Win Duster Flat UI Edition?</div>
-                <div class="faq-answer">A1: Win Duster Flat UI Edition is an all-in-one PC optimization tool designed for Windows. It helps clean up your system, improve performance, and optimize your hardware. With features like full system scans, network optimization, HDD/SSD maintenance, and temporary file removal, Win Duster ensures your PC runs at its best.</div>
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <h3>System Scan</h3>
+                <p>Check and repair system health, detect malware, and optimize performance.</p>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q2: What tools does Win Duster use?</div>
-                <div class="faq-answer">A2: Win Duster uses built-in Windows tools like DISM, IPConfig, and Defrag to perform critical tasks. It also leverages advanced commands in CMD to manage system health, network settings, and optimize storage, all while maintaining an intuitive user interface.</div>
+            <div class="feature">
+                <i class="fa fa-wifi" aria-hidden="true"></i>
+                <h3>Network Optimization</h3>
+                <p>Improve your internet connection with easy network settings management.</p>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q3: How does the Full System Scan feature work?</div>
-                <div class="faq-answer">A3: The Full System Scan performs various tasks like checking the health of the Windows image, repairing any system corruption, analyzing and cleaning up the Windows component store, verifying the integrity of system files, scanning for malware, and ensuring drivers are up to date.</div>
+            <div class="feature">
+                <i class="fa fa-hdd" aria-hidden="true"></i>
+                <h3>HDD/SSD Maintenance</h3>
+                <p>Defrag and trim your HDDs and SSDs for better performance and longevity.</p>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q4: What is the Network Optimization feature?</div>
-                <div class="faq-answer">A4: The Network Optimization tool helps improve your system's internet connectivity by refreshing the network settings, renewing IP addresses, and flushing the DNS cache.</div>
+            <div class="feature">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <h3>Clean Temporary Files</h3>
+                <p>Clear out unnecessary files to free up space and speed up your system.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="faq-item">
-                <div class="faq-question">Q5: How does the HDD/SSD Defrag and Trim feature work?</div>
-                <div class="faq-answer">A5: Win Duster uses the built-in Windows tools to defrag and trim your HDDs and SSDs. This helps improve disk performance and extend the lifespan of your SSDs by optimizing space and ensuring efficient read/write operations.</div>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <span>Q1: What is Win Duster Flat UI Edition?</span>
+                <i class="fa fa-chevron-down"></i>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q6: How does the Temporary File Removal feature work?</div>
-                <div class="faq-answer">A6: The Temporary File Removal tool performs deep cleaning by clearing out unnecessary files accumulated over time, helping free up disk space and improve system performance.</div>
+            <div class="accordion-body">
+                <p>Win Duster Flat UI Edition is an all-in-one PC optimization tool designed for Windows...</p>
             </div>
+        </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Q7: Is Win Duster Flat UI Edition free to use?</div>
-                <div class="faq-answer">A7: Yes, Win Duster is completely free to download and use. We aim to provide users with powerful optimization tools at no cost, ensuring your system runs efficiently.</div>
-            </div>
+        <!-- Add other FAQs here similarly... -->
 
-            <div class="faq-item">
-                <div class="faq-question">Q8: How often should I use Win Duster?</div>
-                <div class="faq-answer">A8: It's recommended to run Win Duster at regular intervals, such as once a month, or whenever you notice performance issues like slow startup or lagging applications. You can also set daily or weekly reminders within the app for regular maintenance.</div>
-            </div>
+    </section>
 
-            <div class="faq-item">
-                <div class="faq-question">Q9: Will Win Duster slow down my PC?</div>
-                <div class="faq-answer">A9: No, Win Duster is designed to optimize your system, not slow it down. It helps clear out junk files, optimize drives, and ensure your Windows environment is running smoothly without causing any performance degradation.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q10: How do I update Win Duster?</div>
-                <div class="faq-answer">A10: Updates for Win Duster are released periodically, and you can install them by checking the app for new versions. When a new update is available, you’ll receive a notification to download and install it, ensuring your app remains up to date with the latest features and improvements.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q11: What if I face issues with Win Duster?</div>
-                <div class="faq-answer">A11: If you encounter any issues, you can visit the GitHub repository for troubleshooting tips, or reach out to the support team for assistance. You can also check the FAQ section for solutions to common problems.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q12: Is my data safe while using Win Duster?</div>
-                <div class="faq-answer">A12: Yes, your privacy is important to us. Win Duster does not collect any personal data, and all operations are performed locally on your machine. You can use the app with confidence, knowing that your data is secure.</div>
-            </div>
-
-            <p>Still have questions? Feel free to contact us through our GitHub repository or email us at <a href="mailto:support@winduster.com">support@winduster.com</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Win Duster. All rights reserved.</p>
+    <footer id="contact">
+        <p>Contact us at <a href="mailto:support@winduster.com">support@winduster.com</a></p>
     </footer>
 
     <script src="script.js"></script>
