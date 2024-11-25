@@ -1,24 +1,47 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+// Smooth scroll for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function () {
-            const item = header.parentElement;
-            const body = item.querySelector('.accordion-body');
-            const isActive = item.classList.contains('active');
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
 
-            // Close all accordion items
-            document.querySelectorAll('.accordion-item').forEach(i => {
-                i.classList.remove('active');
-                const bodyToClose = i.querySelector('.accordion-body');
-                bodyToClose.style.maxHeight = null;
-            });
-
-            // If the clicked item was not active, open it
-            if (!isActive) {
-                item.classList.add('active');
-                body.style.maxHeight = body.scrollHeight + 'px';
-            }
-        });
+    window.scrollTo({
+      top: targetElement.offsetTop - 50, // Adjust for navbar height
+      behavior: 'smooth'
     });
+  });
+});
+
+// Scroll animations for sections
+const animatedElements = document.querySelectorAll('.fade-in');
+
+function checkInView() {
+  const windowHeight = window.innerHeight;
+  const scrollTop = window.scrollY;
+
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top + scrollTop;
+    if (elementTop < scrollTop + windowHeight - 100) {
+      element.classList.add('in-view');
+    }
+  });
+}
+
+// Initial check on page load
+checkInView();
+
+// Check as the user scrolls
+window.addEventListener('scroll', checkInView);
+
+// Add animation on button hover
+document.querySelectorAll('.hero button').forEach(button => {
+  button.addEventListener('mouseover', () => {
+    button.style.transform = 'scale(1.1)';
+    button.style.transition = 'transform 0.2s ease-in-out';
+  });
+
+  button.addEventListener('mouseout', () => {
+    button.style.transform = 'scale(1)';
+  });
 });
