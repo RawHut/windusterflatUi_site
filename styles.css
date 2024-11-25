@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background color for dark mode */
-    color: #f0f0f0; /* Light text color */
+    background-color: #121212; /* Very dark background color */
+    color: #e0e0e0; /* Light grey text color for readability */
     overflow-x: hidden;
 }
 
@@ -20,8 +20,8 @@ body {
 
 /* Header */
 header {
-    background-color: #1e1e1e; /* Darker background */
-    color: #f0f0f0;
+    background-color: #1e1e1e; /* Darker header background */
+    color: #e0e0e0;
     padding: 20px 0;
     text-align: center;
     animation: fadeIn 1s ease-out;
@@ -29,7 +29,7 @@ header {
 
 header h1 {
     font-size: 36px;
-    color: #4CAF50; /* Accent color for text */
+    color: #4C9F70; /* Teal-like accent color */
     animation: slideInLeft 1s ease-out;
 }
 
@@ -42,7 +42,7 @@ header p {
 }
 
 .header-buttons .btn {
-    background-color: #4CAF50;
+    background-color: #4C9F70; /* Teal button color */
     color: #fff;
     padding: 10px 20px;
     margin: 10px;
@@ -53,13 +53,13 @@ header p {
 }
 
 .header-buttons .btn:hover {
-    background-color: #45a049;
+    background-color: #388E56; /* Slightly darker teal on hover */
 }
 
 /* Intro Section */
 .intro {
     padding: 50px 0;
-    background-color: rgba(33, 33, 33, 0.9);
+    background-color: #1B1B1B; /* Darker background */
     text-align: center;
     animation: fadeIn 1.5s ease-out;
 }
@@ -78,7 +78,7 @@ header p {
 /* About Section */
 .about {
     padding: 50px 0;
-    background-color: rgba(33, 33, 33, 0.9);
+    background-color: #1B1B1B; /* Matching dark background */
     text-align: center;
     animation: fadeIn 1.5s ease-out;
 }
@@ -109,7 +109,7 @@ header p {
 /* FAQ Section */
 .faq {
     padding: 50px 0;
-    background-color: rgba(40, 40, 40, 0.9);
+    background-color: #2A2A2A; /* Darker background for FAQ section */
 }
 
 .faq h2 {
@@ -122,7 +122,7 @@ header p {
 /* FAQ Box */
 .faq-item {
     display: flex;
-    background-color: #2a2a2a;
+    background-color: #333; /* Dark grey background for FAQ box */
     padding: 20px;
     margin: 15px 0;
     border-radius: 8px;
@@ -140,7 +140,7 @@ header p {
 .faq-icon {
     font-size: 30px;
     margin-right: 20px;
-    color: #4CAF50;
+    color: #4C9F70; /* Teal icon color */
 }
 
 .faq-content h3 {
@@ -155,8 +155,8 @@ header p {
 
 /* Footer */
 footer {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    background-color: #1E1E1E;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px 0;
 }
