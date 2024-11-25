@@ -4,46 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Win Duster Flat UI Edition</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <h1>Win Duster</h1>
-        </div>
-        <div class="header-buttons">
-            <a href="faq.html">
-                <button class="faq-btn">FAQ</button>
-            </a>
-        </div>
+    <header class="header">
+        <h1 class="logo">Win Duster <span>Flat UI Edition</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="main-content">
-            <section class="intro">
-                <h2>Welcome to Win Duster Flat UI Edition!</h2>
-                <p>Optimize your PC with a beautiful, easy-to-use interface. Let Win Duster take care of system maintenance and improve your Windows experience.</p>
-                <div class="feature-cards">
-                    <div class="card">
-                        <h3>Full System Scan</h3>
-                        <p>Checks and repairs system health, verifies file integrity, and fixes corruptions.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Network Optimization</h3>
-                        <p>Improves your network connectivity by renewing IP addresses and flushing DNS cache.</p>
-                    </div>
-                    <div class="card">
-                        <h3>HDD/SSD Maintenance</h3>
-                        <p>Defrag and trim your drives to improve storage performance.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="footer">
-                <p>&copy; 2024 Win Duster. All rights reserved.</p>
-            </section>
+    <section id="about" class="about">
+        <div class="content">
+            <h2>What is Win Duster?</h2>
+            <p>An all-in-one tool for optimizing and maintaining your Windows PC, developed with cutting-edge features to ensure a seamless computing experience.</p>
         </div>
-    </main>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Full System Scan</h3>
+                <p>Comprehensive system health checks and fixes.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-network-wired"></i>
+                <h3>Network Optimization</h3>
+                <p>Optimize your network for better connectivity.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-hdd"></i>
+                <h3>HDD/SSD Maintenance</h3>
+                <p>Trim and defrag drives to improve performance.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-trash-alt"></i>
+                <h3>Temporary File Removal</h3>
+                <p>Clear junk files to free up space.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <h2>Download Now</h2>
+        <p>Experience the power of system optimization. Get Win Duster Flat UI Edition today!</p>
+        <a href="#" class="btn">Download <i class="fas fa-download"></i></a>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">How do I install Win Duster? <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-body">
+                    <p>Simply download the setup file, run it, and follow the on-screen instructions.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Is the app free? <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-body">
+                    <p>Yes, it's completely free to use!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Win Duster Flat UI Edition. Built with ❤️ by a solo developer.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
