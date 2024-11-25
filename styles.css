@@ -1,14 +1,13 @@
-/* Change color combination */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e3f2fd;  /* Soft blue background */
+    background-color: #f5f5f5;
     color: #333;
 }
 
 header {
-    background-color: #1e88e5;  /* Change to a bright blue */
+    background-color: #2c3e50;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -17,11 +16,11 @@ header {
 header .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #fff;
+    color: #ecf0f1;
 }
 
 header .logo span {
-    color: #c2185b;  /* Pink accent for part of the logo */
+    color: #3498db;
 }
 
 nav ul {
@@ -43,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #c2185b;  /* Pink hover color */
+    color: #3498db;
 }
 
 section {
@@ -52,28 +51,23 @@ section {
 
 .features .feature-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .features .feature {
-    width: 30%;  /* Adjust to fit 3 boxes in a row */
+    width: 22%;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 30px;
-    transition: transform 0.3s ease;
-}
-
-.features .feature:hover {
-    transform: translateY(-5px);  /* Add hover effect */
 }
 
 .features .feature i {
     font-size: 40px;
-    color: #1e88e5;  /* Blue icon color */
+    color: #3498db;
 }
 
 .features .feature h3 {
@@ -97,7 +91,7 @@ section {
 }
 
 .accordion-header {
-    background-color: #1e88e5;  /* Blue header */
+    background-color: #3498db;
     color: #fff;
     padding: 15px;
     width: 100%;
@@ -113,7 +107,7 @@ section {
 
 .accordion-body {
     padding: 15px;
-    background-color: #e3f2fd;  /* Soft blue background for the body */
+    background-color: #ecf0f1;
     border-radius: 5px;
     display: none;
     font-size: 16px;
@@ -129,10 +123,4 @@ section {
 
 .accordion-item.active .accordion-header i {
     transform: rotate(180deg);
-}
-
-/* Special layout for the "Temporary Files Removal" feature */
-.features .feature.temp-file-removal {
-    width: 100%;  /* Make it full-width */
-    margin-top: 40px;
 }
