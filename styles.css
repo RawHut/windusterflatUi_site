@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 .container {
@@ -22,10 +23,12 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 header h1 {
     font-size: 36px;
+    animation: slideInLeft 1s ease-out;
 }
 
 header p {
@@ -37,15 +40,18 @@ header p {
     padding: 50px 0;
     background-color: #ffffff;
     text-align: center;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .intro h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    animation: slideInLeft 1.5s ease-out;
 }
 
 .intro p {
     font-size: 18px;
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* FAQ Section */
@@ -58,15 +64,20 @@ header p {
     font-size: 32px;
     margin-bottom: 20px;
     text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 .faq-item {
     margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInUp 1s forwards;
 }
 
 .faq-item h3 {
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .faq-item p {
@@ -79,14 +90,16 @@ header p {
     padding-left: 20px;
 }
 
+/* Hover Effects */
+.faq-item h3:hover {
+    color: #4CAF50;
+}
+
 /* Contact Section */
 .contact {
     padding: 20px;
     text-align: center;
-}
-
-.contact h3 {
-    font-size: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .contact a {
@@ -94,14 +107,36 @@ header p {
     text-decoration: none;
 }
 
+.contact a:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
+    font-size: 14px;
 }
 
-footer p {
-    font-size: 14px;
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Scroll Animation */
+body {
+    scroll-behavior: smooth;
 }
