@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Win Duster Flat UI Edition</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win Duster Flat UI Edition</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            Win Duster <span>Flat UI Edition</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">Win Duster</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="features">
-        <h2>Our Key Features</h2>
-        <div class="features">
-            <div class="feature">
-                <i class="fas fa-tools"></i>
-                <h3>System Health</h3>
-                <p>Optimize your PC by checking system health and cleaning up unnecessary files.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-network-wired"></i>
-                <h3>Network Boost</h3>
-                <p>Enhance your network connection for faster and more stable internet.</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-hard-drive"></i>
-                <h3>Drive Maintenance</h3>
-                <p>Defrag and trim your HDDs and SSDs for better performance.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Optimize Your PC with Win Duster Flat UI Edition</h1>
+      <p>Enhance performance, clean up your system, and keep it running smoothly.</p>
+      <button onclick="window.location.href='#features'">Learn More</button>
+    </div>
+  </section>
 
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div id="accordion">
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What is Win Duster Flat UI Edition?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-body">
-                    Win Duster Flat UI Edition is a comprehensive optimization tool for your PC that enhances performance through a variety of cleaning and system management features.
-                </div>
-            </div>
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What tools does Win Duster use?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="accordion-body">
-                    Win Duster leverages built-in Windows tools like DISM, IPConfig, and Defrag to optimize your system.
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Full System Scan</h3>
+        <p>Diagnose and repair your system's health with a full scan.</p>
+      </div>
+      <div class="card">
+        <h3>Network Optimization</h3>
+        <p>Boost your internet speed by refreshing network settings.</p>
+      </div>
+      <div class="card">
+        <h3>HDD/SSD Maintenance</h3>
+        <p>Defrag and trim your disks to improve performance and extend lifespan.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Win Duster. All Rights Reserved.</p>
-    </footer>
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>Q1: What is Win Duster Flat UI Edition?</strong>
+      <p>A1: Win Duster is an all-in-one PC optimization tool designed for Windows, with features like system scans, network optimization, and more.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q2: What tools does Win Duster use?</strong>
+      <p>A2: Win Duster uses built-in Windows tools like DISM, IPConfig, and Defrag, as well as advanced CMD commands for optimization.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q3: How does the Full System Scan work?</strong>
+      <p>A3: It checks the system health, repairs corruption, analyzes components, and ensures drivers are up to date.</p>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out!</p>
+    <a href="mailto:support@winduster.com">Contact Support</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Win Duster. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
