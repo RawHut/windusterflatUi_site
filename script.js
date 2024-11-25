@@ -1,12 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all FAQ items
-    const faqItems = document.querySelectorAll('.accordion-item');
+ document.addEventListener('DOMContentLoaded', function () {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-    // Loop through each FAQ item and add a click event listener to the question
-    faqItems.forEach(item => {
-        item.querySelector('.accordion-header').addEventListener('click', function() {
-            // Toggle the 'open' class on the FAQ item when clicked
-            item.classList.toggle('open');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const item = header.parentElement;
+            const body = item.querySelector('.accordion-body');
+
+            item.classList.toggle('active');
+
+            // Animate the accordion body
+            if (item.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                body.style.transition = 'max-height 0.5s ease-in-out';
+            } else {
+                body.style.maxHeight = '0';
+                body.style.transition = 'max-height 0.5s ease-in-out';
+            }
         });
     });
 });
