@@ -57,6 +57,37 @@ header p {
     animation: fadeIn 1.5s ease-out;
 }
 
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.solo-dev {
+    background-color: #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.solo-dev strong {
+    font-size: 20px;
+}
+
 /* FAQ Section */
 .faq {
     padding: 50px 0;
@@ -127,16 +158,20 @@ footer {
 }
 
 @keyframes slideInLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
 
 @keyframes fadeInBox {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-/* Scroll Animation */
-body {
-    scroll-behavior: smooth;
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
 }
+
+.fade-in-box {
+    animation: fadeInBox 1s forwards;
+}
+
