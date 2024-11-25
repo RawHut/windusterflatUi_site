@@ -5,16 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
         header.addEventListener('click', function () {
             const item = header.parentElement;
             const body = item.querySelector('.accordion-body');
+            const isActive = item.classList.contains('active');
 
-            item.classList.toggle('active');
+            // Close all accordion items
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+                const bodyToClose = i.querySelector('.accordion-body');
+                bodyToClose.style.maxHeight = null;
+            });
 
-            // Animate the accordion body
-            if (item.classList.contains('active')) {
+            // If the clicked item was not active, open it
+            if (!isActive) {
+                item.classList.add('active');
                 body.style.maxHeight = body.scrollHeight + 'px';
-                body.style.transition = 'max-height 0.5s ease-in-out';
-            } else {
-                body.style.maxHeight = '0';
-                body.style.transition = 'max-height 0.5s ease-in-out';
             }
         });
     });
