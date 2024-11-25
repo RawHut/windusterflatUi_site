@@ -2,12 +2,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f0f2f5;
     color: #333;
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #1abc9c;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -20,16 +20,16 @@ header {
 header .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #ecf0f1;
+    color: #fff;
     transition: color 0.3s;
 }
 
 header .logo span {
-    color: #3498db;
+    color: #2c3e50;
 }
 
 header .logo:hover {
-    color: #3498db;
+    color: #2c3e50;
 }
 
 nav ul {
@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #3498db;
+    color: #2c3e50;
 }
 
 section {
@@ -87,7 +87,7 @@ section:target {
 
 .features .feature i {
     font-size: 40px;
-    color: #3498db;
+    color: #1abc9c;
 }
 
 .features .feature h3 {
@@ -112,7 +112,7 @@ section:target {
 }
 
 .accordion-header {
-    background-color: #3498db;
+    background-color: #1abc9c;
     color: #fff;
     padding: 15px;
     width: 100%;
@@ -128,7 +128,7 @@ section:target {
 }
 
 .accordion-header:hover {
-    background-color: #2980b9;
+    background-color: #16a085;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,4 +152,20 @@ section:target {
 
 .accordion-item.active .accordion-header i {
     transform: rotate(180deg);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
 }
