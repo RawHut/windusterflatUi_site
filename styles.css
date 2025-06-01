@@ -76,6 +76,12 @@ a:hover {
   border: 2px solid #60a5fa;
   color: #60a5fa;
 }
+.btn.disabled {
+  background-color: #3a5068; /* muted dark blue */
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
 
 .secondary-btn:hover {
   background: #1e40af;
