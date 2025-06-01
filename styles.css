@@ -1,190 +1,263 @@
-/* General Reset */
+/* === Base Reset === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Very dark background color */
-    color: #e0e0e0; /* Light grey text color for readability */
-    overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #0b1120;
+  color: #e5e7eb;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Container */
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #93c5fd;
+}
+
+/* === Containers === */
 .container {
-    width: 80%;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
 }
 
-/* Header */
-header {
-    background-color: #1e1e1e; /* Darker header background */
-    color: #e0e0e0;
-    padding: 20px 0;
-    text-align: center;
-    animation: fadeIn 1s ease-out;
+/* === Header === */
+.header {
+  background: #1e293b;
+  padding: 3rem 0;
+  text-align: center;
+  border-bottom: 2px solid #334155;
 }
 
-header h1 {
-    font-size: 36px;
-    color: #4C9F70; /* Teal-like accent color */
-    animation: slideInLeft 1s ease-out;
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #f1f5f9;
 }
 
-header p {
-    font-size: 18px;
+.tagline {
+  font-size: 1.2rem;
+  color: #94a3b8;
 }
 
 .header-buttons {
-    margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
-.header-buttons .btn {
-    background-color: #4C9F70; /* Teal button color */
-    color: #fff;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.header-buttons .btn:hover {
-    background-color: #388E56; /* Slightly darker teal on hover */
+.primary-btn {
+  background: #3b82f6;
+  color: #fff;
 }
 
-/* Intro Section */
-.intro {
-    padding: 50px 0;
-    background-color: #1B1B1B; /* Darker background */
-    text-align: center;
-    animation: fadeIn 1.5s ease-out;
+.primary-btn:hover {
+  background: #2563eb;
 }
 
-.intro h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    animation: slideInLeft 1.5s ease-out;
+.secondary-btn {
+  border: 2px solid #60a5fa;
+  color: #60a5fa;
 }
 
-.intro p {
-    font-size: 18px;
-    animation: fadeIn 1.5s ease-out;
+.secondary-btn:hover {
+  background: #1e40af;
+  color: #fff;
 }
 
-/* About Section */
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 4rem 0;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+/* === Features === */
+.features {
+  background-color: #0f172a;
+  padding: 4rem 0;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.feature-item i {
+  font-size: 2rem;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* === About Section === */
 .about {
-    padding: 50px 0;
-    background-color: #1B1B1B; /* Matching dark background */
-    text-align: center;
-    animation: fadeIn 1.5s ease-out;
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  padding: 4rem 0;
+  background-color: #1e293b;
+  text-align: center;
 }
 
 .about p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+  max-width: 700px;
+  margin: 1rem auto;
+  color: #cbd5e1;
 }
 
-.solo-dev {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    font-size: 18px;
+.solo-dev-love {
+  margin-top: 1.5rem;
+  color: #f87171;
+  font-style: italic;
 }
 
-.solo-dev strong {
-    font-size: 20px;
-}
-
-/* FAQ Section */
+/* === FAQ Section === */
 .faq {
-    padding: 50px 0;
-    background-color: #2A2A2A; /* Darker background for FAQ section */
+  padding: 4rem 0;
+  background-color: #0f172a;
 }
 
 .faq h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-    animation: fadeIn 1s ease-out;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* FAQ Box */
 .faq-item {
-    display: flex;
-    background-color: #333; /* Dark grey background for FAQ box */
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInBox 1s forwards;
+  max-width: 700px;
+  margin: 1rem auto;
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid #3b82f6;
+  transition: background 0.3s ease;
 }
 
 .faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  background: #334155;
 }
 
-.faq-icon {
-    font-size: 30px;
-    margin-right: 20px;
-    color: #4C9F70; /* Teal icon color */
+.faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-.faq-content h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+/* === Download Section === */
+.download-section {
+  padding: 4rem 0;
+  background: #1e40af;
+  text-align: center;
+  color: white;
 }
 
-.faq-content p {
-    font-size: 16px;
-    line-height: 1.5;
+.download-section .btn.large {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  background-color: #2563eb;
+  border: none;
 }
 
-/* Footer */
-footer {
-    background-color: #1E1E1E;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 20px 0;
+.download-section .btn.large:hover {
+  background-color: #1d4ed8;
 }
 
-footer p {
-    font-size: 16px;
+/* === Contact Section === */
+.contact-section {
+  padding: 3rem 0;
+  background-color: #0f172a;
+  text-align: center;
 }
 
-/* Animations */
+.contact-section a {
+  font-weight: 600;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #1e293b;
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* === Animations === */
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes slideInLeft {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
+/* === Responsive === */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
 
-@keyframes fadeInBox {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+  .hero h2,
+  .features h2,
+  .about h2,
+  .faq h2,
+  .download-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
 
-.fade-in {
-    animation: fadeIn 1.5s ease-out;
-}
-
-.fade-in-box {
-    animation: fadeInBox 1s forwards;
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
