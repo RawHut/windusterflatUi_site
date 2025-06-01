@@ -1,133 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Win Duster - FAQ</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
-    <style>
-        body {
-            background-color: #f4f6f9;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        header {
-            background-color: #1f3a66;
-            color: #fff;
-            padding: 20px 0;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-        }
-        .faq-container {
-            max-width: 800px;
-            width: 100%;
-            margin-top: 40px;
-        }
-        .faq-item {
-            background: #fff;
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-        .faq-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-        }
-        .faq-item h3 {
-            font-size: 1.5rem;
-            color: #1f3a66;
-            margin-bottom: 10px;
-        }
-        .faq-item p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .back-btn {
-            background-color: #1f3a66;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            margin-top: 30px;
-            transition: 0.3s;
-        }
-        .back-btn:hover {
-            background-color: #234d6f;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FAQ - Win Duster Flat UI Edition" />
+  <title>FAQ | Win Duster Flat UI Edition</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Frequently Asked Questions</h1>
-    </header>
-
-    <div class="faq-container">
-        <div class="faq-item">
-            <h3>What is Win Duster Flat UI Edition?</h3>
-            <p>Win Duster Flat UI Edition is an all-in-one PC optimization tool designed for Windows. It helps clean up your system, improve performance, and optimize your hardware. With features like full system scans, network optimization, HDD/SSD maintenance, and temporary file removal, Win Duster ensures your PC runs at its best.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What tools does Win Duster use?</h3>
-            <p>Win Duster uses built-in Windows tools like DISM, IPConfig, and Defrag to perform critical tasks. It also leverages advanced commands in CMD to manage system health, network settings, and optimize storage, all while maintaining an intuitive user interface.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How does the Full System Scan feature work?</h3>
-            <p>The Full System Scan performs various tasks like checking system health, repairing corruption, analyzing and cleaning up the component store, and ensuring system file integrity.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What is the Network Optimization feature?</h3>
-            <p>Network Optimization helps improve your system's internet connectivity by refreshing network settings, renewing IP addresses, and flushing the DNS cache.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How does the HDD/SSD Defrag and Trim feature work?</h3>
-            <p>Win Duster uses Windows tools to defrag and trim HDDs and SSDs, improving disk performance and ensuring efficient storage usage.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How does the Temporary File Removal feature work?</h3>
-            <p>The Temporary File Removal tool deep cleans by clearing out unnecessary files that can accumulate and take up valuable space.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is Win Duster Flat UI Edition free to use?</h3>
-            <p>Yes, Win Duster is completely free to download and use, with no hidden costs.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How often should I use Win Duster?</h3>
-            <p>It's recommended to use Win Duster regularly—once a month or whenever you notice performance issues. You can also set reminders within the app for routine maintenance.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Will Win Duster slow down my PC?</h3>
-            <p>No, Win Duster is designed to improve your PC's performance by cleaning and optimizing system files, not slow it down.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How do I update Win Duster?</h3>
-            <p>Updates are released periodically. You’ll be notified when an update is available, and you can install it directly through the app.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What if I face issues with Win Duster?</h3>
-            <p>If you encounter issues, check the [GitHub repository](https://github.com/ADIT011007/windusterflatUi_site) for troubleshooting tips or contact support for assistance.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is my data safe while using Win Duster?</h3>
-            <p>Your privacy is important. Win Duster does not collect personal data, and all operations are performed locally on your machine.</p>
-        </div>
-
-        <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+  <header class="header">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p class="tagline">Everything you need to know about Win Duster</p>
+      <div class="header-buttons">
+        <a href="index.html#download" class="btn primary-btn">Back to Home</a>
+      </div>
     </div>
+  </header>
+
+  <section class="faq fade-in">
+    <div class="container">
+      <h2>Answers & Details</h2>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-question-circle"></i> What is Win Duster Flat UI Edition?</h3>
+        <p>It’s a Windows maintenance tool designed to clean, optimize, and repair your PC using built-in system tools wrapped in a sleek interface.</p>
+      </div>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-cogs"></i> What system tools does it use?</h3>
+        <p>Win Duster uses Windows tools such as DISM, IPConfig, SFC, and Disk Defragmenter. It runs them via smart automation for safety and performance.</p>
+      </div>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-hdd"></i> Is it safe for SSDs?</h3>
+        <p>Absolutely! SSDs are trimmed (not defragmented) using proper commands to maintain speed and longevity.</p>
+      </div>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-network-wired"></i> How does Network Optimization work?</h3>
+        <p>It refreshes your IP, DNS, and adapter settings — giving your internet connection a fresh start when it's acting up.</p>
+      </div>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-laptop-code"></i> Do I need to know CMD?</h3>
+        <p>Nope! Win Duster handles the complex commands behind the scenes — you get clean buttons and simple interfaces.</p>
+      </div>
+
+      <div class="faq-item fade-in-box">
+        <h3><i class="fas fa-gift"></i> Are there any upcoming features?</h3>
+        <p>Yes! This is just version 1.0 — expect new tools, UI refinements, and user-requested features very soon. Stay tuned!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about fade-in">
+    <div class="container">
+      <h2>Thank You for the Support!</h2>
+      <p>This is the first public release of Win Duster Flat UI Edition. I'm incredibly excited to share it with the world, and even more excited for what’s next.</p>
+      <p class="solo-dev-love">Built with ❤️ by a solo developer — your feedback drives future updates!</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Win Duster Flat UI Edition. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
