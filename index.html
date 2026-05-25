@@ -1,63 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Win Duster Flat UI Edition - PC Optimization Tool for Windows" />
-  <title>Win Duster Flat UI Edition</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinDuster | Windows System Repair & Cleaner</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #1a2235;
+            --primary: #38bdf8;
+            --primary-hover: #0ea5e9;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4); }
+            70% { box-shadow: 0 0 20px 10px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, var(--bg-color) 70%);
+            padding-top: 60px;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #e0f2fe, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--bg-color);
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out 0.4s both, pulseGlow 2s infinite;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--text-main);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #e0f2fe;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        /* Technical Specs Section */
+        .specs {
+            background-color: var(--surface-color);
+            padding: 100px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .specs-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .specs-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .specs-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .specs-text li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .specs-text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--bg-color);
+            color: var(--text-muted);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        /* Code visualizer */
+        .code-window {
+            flex: 1;
+            min-width: 300px;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .code-header {
+            background: #1e1e1e;
+            padding: 10px;
+            display: flex;
+            gap: 6px;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.r { background: #ff5f56; }
+        .dot.y { background: #ffbd2e; }
+        .dot.g { background: #27c93f; }
+        .code-body {
+            padding: 20px;
+            font-family: Consolas, monospace;
+            color: #d4d4d4;
+            font-size: 0.9rem;
+        }
+        .c-blue { color: #569cd6; }
+        .c-green { color: #4ec9b0; }
+        .c-orange { color: #ce9178; }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <h1>Win Duster Flat UI Edition</h1>
-      <p>PC Optimization Tool for Windows</p>
-      <div class="header-buttons">
-        <div class="download-notice">
-          <p>⏳ <strong>Wait up!</strong> The app isn’t available yet, but hey — why not take a minute and <a href="#about">learn about Win Duster?</a> It might just help you get hyped!</p>
+
+    <header>
+        <div class="container">
+            <h1 class="hero-title">WinDuster</h1>
+            <p class="hero-subtitle">The ultimate lightweight utility to scan, repair, and deep-clean your Windows system. Built for speed, engineered for safety.</p>
+            <a href="https://github.com/YOUR_USERNAME/WinDuster/releases" class="cta-btn">Download for Windows</a>
         </div>
-        <a href="faq.html" class="btn contact-btn">FAQ</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="intro fade-in">
-    <div class="container">
-      <h2>Welcome to Win Duster Flat UI Edition</h2>
-      <p>Optimize your Windows PC with powerful built-in tools. Clean up your system, enhance performance, and keep everything running smoothly.</p>
-    </div>
-  </section>
+    <section class="features container">
+        <h2 class="section-title reveal">Powerful Tools. One Interface.</h2>
+        <div class="grid">
+            <div class="card reveal">
+                <span class="card-icon">🛡️</span>
+                <h3>Automated System Repair</h3>
+                <p>Run sequential DISM (Check, Scan, Restore) and SFC /scannow commands automatically. WinDuster handles the complex console commands so you don't have to.</p>
+            </div>
+            
+            <div class="card reveal">
+                <span class="card-icon">🧹</span>
+                <h3>Intelligent Cleaning</h3>
+                <p>Choose between Quick Clean for daily cache clearing, or Deep Clean to wipe out gigs of old Windows Update caches, Crash Dumps, and Delivery Optimization files.</p>
+            </div>
 
-  <section id="about" class="about fade-in">
-    <div class="container">
-      <h2>About Win Duster</h2>
-      <p>Win Duster Flat UI Edition is an all-in-one, user-friendly PC optimization tool designed specifically for Windows users. It helps you keep your computer running smoothly by performing critical maintenance tasks such as system scans, defragmentation, network optimization, and much more. With a sleek flat UI and powerful built-in tools, Win Duster makes sure your PC stays fast, secure, and reliable.</p>
+            <div class="card reveal">
+                <span class="card-icon">🔧</span>
+                <h3>Update Component Fixer</h3>
+                <p>Windows Update stuck? WinDuster includes a dedicated one-click script that gracefully stops services, renames broken distribution folders, and restarts the update engine.</p>
+            </div>
 
-      <div class="solo-dev">
-        <p><strong>Love from Solo Dev</strong></p>
-        <p>Created and maintained by a single developer with a passion for making PCs run better! Every feature and update is designed with care, and I hope you enjoy using it as much as I enjoyed building it.</p>
-      </div>
-    </div>
-  </section>
+            <div class="card reveal">
+                <span class="card-icon">⚡</span>
+                <h3>Throttled UI Engine</h3>
+                <p>Built with an asynchronous core and a specialized UI throttle. Deleting thousands of temp files won't freeze the app, giving you a smooth, real-time progress view.</p>
+            </div>
 
-  <section class="compatibility fade-in">
-    <div class="container">
-      <p><i class="fas fa-desktop"></i> <strong>Compatible with Windows 10 and above</strong></p>
-      <p>🚀 <strong>App will be ready and publicly available soon!</strong></p>
-      <p class="coming-soon">📘 User Guide coming soon!</p>
-    </div>
-  </section>
+            <div class="card reveal">
+                <span class="card-icon">💀</span>
+                <h3>Ghost Process Killer</h3>
+                <p>Never get stuck with a locked system again. WinDuster actively monitors and safely terminates any background DISM processes that hang unexpectedly.</p>
+            </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Win Duster Flat UI Edition. All rights reserved.</p>
-    </div>
-  </footer>
+            <div class="card reveal">
+                <span class="card-icon">📚</span>
+                <h3>Built-in Documentation</h3>
+                <p>Not sure what 'ResetBase' does? Our integrated interactive HTML guide explains every scan and cleanup task in plain English before you run it.</p>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <section class="specs">
+        <div class="container specs-content">
+            <div class="specs-text reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Engineered in C#</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px;">WinDuster utilizes native Windows APIs and safe file enumeration to bypass locked files seamlessly without crashing.</p>
+                <ul>
+                    <li>Asynchronous Task Management</li>
+                    <li>Native Shell32.dll integrations for Recycle Bin</li>
+                    <li>Safe ReparsePoint (Symlink) ignoring</li>
+                    <li>Real-time console output redirection</li>
+                </ul>
+            </div>
+            <div class="code-window reveal">
+                <div class="code-header">
+                    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+                </div>
+                <div class="code-body">
+                    <span class="c-blue">private async</span> <span class="c-green">Task</span> RunCleaningTasks(...)<br>
+                    {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">foreach</span> (<span class="c-blue">string</span> task <span class="c-blue">in</span> tasks)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">if</span> (token.IsCancellationRequested) <span class="c-blue">return</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UpdateCleanStatusLive(task);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">await</span> <span class="c-green">Task</span>.Run(() => ExecuteCleanTask(task));<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">WinDuster</div>
+        <p>Open source on GitHub.</p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">&copy; 2026 Adit Rohit Gadkary. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll reveal animation script
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
 </body>
-
 </html>
