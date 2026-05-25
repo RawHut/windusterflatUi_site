@@ -60,6 +60,10 @@
             padding: 0 20px;
         }
 
+        .text-center {
+            text-align: center;
+        }
+
         /* Hero Section */
         header {
             min-height: 100vh;
@@ -91,22 +95,17 @@
             animation: fadeIn 1s ease-out 0.2s both;
         }
 
-        .cta-btn {
+        .status-badge {
             display: inline-block;
-            background-color: var(--primary);
-            color: var(--bg-color);
-            padding: 18px 40px;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 16px 32px;
             font-size: 1.2rem;
             font-weight: bold;
-            text-decoration: none;
+            border: 2px solid var(--primary);
             border-radius: 50px;
-            transition: all 0.3s ease;
             animation: fadeIn 1s ease-out 0.4s both, pulseGlow 2s infinite;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
+            cursor: default;
         }
 
         /* Features Section */
@@ -115,7 +114,6 @@
         }
 
         .section-title {
-            text-align: center;
             font-size: 2.5rem;
             margin-bottom: 60px;
             color: var(--text-main);
@@ -157,43 +155,41 @@
             color: var(--text-muted);
         }
 
-        /* Technical Specs Section */
-        .specs {
+        /* Native Trust Section */
+        .native-trust {
             background-color: var(--surface-color);
             padding: 100px 0;
             border-top: 1px solid rgba(255,255,255,0.05);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .specs-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            align-items: center;
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .specs-text {
-            flex: 1;
-            min-width: 300px;
+        .trust-card {
+            text-align: left;
+            background: rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
         }
 
-        .specs-text ul {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .specs-text li {
+        .trust-card h3 {
+            color: #e0f2fe;
             margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .specs-text li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
+        .trust-card p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
         }
 
         /* Footer */
@@ -210,53 +206,43 @@
             color: var(--text-main);
             margin-bottom: 10px;
         }
-
-        /* Code visualizer */
-        .code-window {
-            flex: 1;
-            min-width: 300px;
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-        .code-header {
-            background: #1e1e1e;
-            padding: 10px;
-            display: flex;
-            gap: 6px;
-        }
-        .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .dot.r { background: #ff5f56; }
-        .dot.y { background: #ffbd2e; }
-        .dot.g { background: #27c93f; }
-        .code-body {
-            padding: 20px;
-            font-family: Consolas, monospace;
-            color: #d4d4d4;
-            font-size: 0.9rem;
-        }
-        .c-blue { color: #569cd6; }
-        .c-green { color: #4ec9b0; }
-        .c-orange { color: #ce9178; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
+        <div class="container text-center">
             <h1 class="hero-title">WinDuster</h1>
             <p class="hero-subtitle">The ultimate lightweight utility to scan, repair, and deep-clean your Windows system. Built for speed, engineered for safety.</p>
-            <a href="https://github.com/YOUR_USERNAME/WinDuster/releases" class="cta-btn">Download for Windows</a>
+            <div class="status-badge">🚀 In Active Development – Coming Soon</div>
         </div>
     </header>
 
+    <section class="native-trust reveal">
+        <div class="container text-center">
+            <h2 class="section-title">100% Native. Zero Bloatware.</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h3>🛡️ Built on Trust</h3>
+                    <p>WinDuster relies strictly on built-in Windows commands like DISM and SFC. We don't inject third-party libraries, background services, or aggressive registry cleaners. It is a smart, safe wrapper for the tools Microsoft already built.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>⏱️ The Ultimate Time Saver</h3>
+                    <p>Why use WinDuster? It prevents human error. Instead of manually typing commands, remembering exact file paths, and risking typos in the command prompt, WinDuster provides a beautiful, foolproof GUI that keeps your PC running flawlessly.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>🔄 Frequently Updated</h3>
+                    <p>Windows is always changing, and so is WinDuster. We actively maintain the code and push frequent updates to adapt to the latest Windows builds, fix bugs immediately, and ensure maximum system stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="features container">
-        <h2 class="section-title reveal">Powerful Tools. One Interface.</h2>
+        <h2 class="section-title text-center reveal">Powerful Tools. One Interface.</h2>
         <div class="grid">
             <div class="card reveal">
-                <span class="card-icon">🛡️</span>
+                <span class="card-icon">⚙️</span>
                 <h3>Automated System Repair</h3>
                 <p>Run sequential DISM (Check, Scan, Restore) and SFC /scannow commands automatically. WinDuster handles the complex console commands so you don't have to.</p>
             </div>
@@ -264,7 +250,7 @@
             <div class="card reveal">
                 <span class="card-icon">🧹</span>
                 <h3>Intelligent Cleaning</h3>
-                <p>Choose between Quick Clean for daily cache clearing, or Deep Clean to wipe out gigs of old Windows Update caches, Crash Dumps, and Delivery Optimization files.</p>
+                <p>Choose between Quick Clean for daily cache clearing, or Deep Clean to wipe out gigs of old Windows Update caches, Crash Dumps, and Delivery Optimization files safely.</p>
             </div>
 
             <div class="card reveal">
@@ -293,41 +279,9 @@
         </div>
     </section>
 
-    <section class="specs">
-        <div class="container specs-content">
-            <div class="specs-text reveal">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Engineered in C#</h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px;">WinDuster utilizes native Windows APIs and safe file enumeration to bypass locked files seamlessly without crashing.</p>
-                <ul>
-                    <li>Asynchronous Task Management</li>
-                    <li>Native Shell32.dll integrations for Recycle Bin</li>
-                    <li>Safe ReparsePoint (Symlink) ignoring</li>
-                    <li>Real-time console output redirection</li>
-                </ul>
-            </div>
-            <div class="code-window reveal">
-                <div class="code-header">
-                    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-                </div>
-                <div class="code-body">
-                    <span class="c-blue">private async</span> <span class="c-green">Task</span> RunCleaningTasks(...)<br>
-                    {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">foreach</span> (<span class="c-blue">string</span> task <span class="c-blue">in</span> tasks)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">if</span> (token.IsCancellationRequested) <span class="c-blue">return</span>;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UpdateCleanStatusLive(task);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-blue">await</span> <span class="c-green">Task</span>.Run(() => ExecuteCleanTask(task));<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                    }
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="footer-logo">WinDuster</div>
-        <p>Open source on GitHub.</p>
+        <p>Open source and coming soon to GitHub.</p>
         <p style="margin-top: 20px; font-size: 0.9rem;">&copy; 2026 Adit Rohit Gadkary. All rights reserved.</p>
     </footer>
 
